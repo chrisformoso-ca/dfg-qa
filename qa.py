@@ -81,7 +81,7 @@ def ask_claude(prompt):
     """Call Claude headless via subprocess."""
     try:
         result = subprocess.run(
-            ["claude", "-p", prompt],
+            ["claude", "-p", prompt, "--model", "sonnet"],
             capture_output=True,
             text=True,
             timeout=60,
